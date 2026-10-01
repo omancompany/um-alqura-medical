@@ -1,0 +1,6 @@
+{
+  "name": "مجمع أم القرى الطبي | Um Alqura Polyclinic",
+  "description": "مجمع أم القرى الطبي في بركاء، سلطنة عمان. كوادر مؤهلة وخبرات طويلة، مع خدمة العلاج الطبيعي وحجز المواعيد عبر واتساب.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

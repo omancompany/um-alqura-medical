@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <circle cx="60" cy="60" r="58" stroke="#CBD5E1" stroke-width="2" fill="#FFFFFF"/>
+  <!-- Right Arch (Taupe) -->
+  <path d="M62 61 V39 C62 31 72 20 75 17 C78 20 88 31 88 39 V61" stroke="#9D9283" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <path d="M68 61 V42 C68 36 73 27 75 24 C77 27 82 36 82 42 V61" stroke="#B6ABA0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <path d="M75 14 V17" stroke="#9D9283" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Left Arch (Teal) -->
+  <path d="M45 61 V36 C45 28 55 18 58 15 C61 18 71 28 71 36 V61" stroke="#0D9488" stroke-width="3.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <path d="M58 12 V15" stroke="#0D9488" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Stethoscope (Left) -->
+  <path d="M21 34 C21 32 23 32 23 34 V40 C23 44 26 47 30 47 C34 47 37 44 37 40 V34 C37 32 39 32 39 34" stroke="#0D9488" stroke-width="2.6" stroke-linecap="round" fill="none"/>
+  <circle cx="22" cy="33" r="2" fill="#0D9488"/>
+  <circle cx="38" cy="33" r="2" fill="#0D9488"/>
+  <path d="M30 47 V53 C30 65 20 62 20 73 C20 83 31 83 34 76" stroke="#0D9488" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <circle cx="35" cy="74" r="3.8" fill="#0D9488"/>
+  <circle cx="35" cy="74" r="1.8" fill="#FFFFFF"/>
+  <!-- Arabic Text -->
+  <text x="64" y="76" text-anchor="middle" fill="#0D9488" font-size="18" font-weight="bold" font-family="'Cairo', sans-serif">مـجـمـع</text>
+  <text x="64" y="89" text-anchor="middle" fill="#78716C" font-size="9.5" font-weight="bold" font-family="'Cairo', sans-serif">أم القرى الطبي</text>
+</svg>
