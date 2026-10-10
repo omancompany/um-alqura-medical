@@ -26,9 +26,9 @@ export const translations = {
       switchLang: 'English',
     },
     hero: {
-      badge: 'الرعاية الطبية الموثوقة في سلطنة عمان • بركاء',
-      title: 'رعايتكم الصحية تبدأ من هنا',
-      description: 'كوادر مؤهلة بخبرات طويلة، ورعاية طبية نضع فيها راحتكم وثقتكم أولًا.',
+      badge: 'مجمع أم القرى الطبي • بركاء',
+      title: 'صحتك تهمنا',
+      description: 'رعاية طبية وعلاج طبيعي في بركاء.',
       primaryCta: 'احجز موعدك عبر واتساب',
       secondaryCta: 'تعرّف على خدماتنا',
       quickSchedule: 'السبت – الخميس: 9:00 ص – 1:00 م | 4:00 م – 8:00 م',
@@ -37,7 +37,7 @@ export const translations = {
     about: {
       sectionBadge: 'من نحن',
       title: 'رعاية طبية بثقة واهتمام',
-      description: 'في مجمع أم القرى الطبي، نحرص على تقديم رعاية صحية متميزة من خلال كوادر مؤهلة وخبرات طويلة، مع الاهتمام براحة المراجعين وتقديم تجربة طبية إنسانية وموثوقة.',
+      description: 'فريق مؤهل يهتم براحتك.',
       trustCards: [
         {
           id: 'qualified-cadres',
@@ -66,7 +66,7 @@ export const translations = {
       physiotherapy: {
         title: 'العلاج الطبيعي',
         badge: 'خدمة معتمدة ومتخصصة',
-        description: 'خدمة العلاج الطبيعي لمساعدة المراجعين على تحسين الحركة والوظائف البدنية من خلال رعاية متخصصة ومتابعة مناسبة.',
+        description: 'جلسات متخصصة لتحسين الحركة وتخفيف الألم.',
         features: [
           'برامج علاجية وتأهيلية مخصصة لكل مراجع',
           'تحسين الحركة والوظائف البدنية وتقليل الآلام',
@@ -119,7 +119,7 @@ export const translations = {
       mapDirectionsHint: 'اضغط على زر الخريطة للانتقال المباشر وتحديد مسار الوصول',
     },
     footer: {
-      shortDescription: 'مجمع أم القرى الطبي في بركاء، سلطنة عمان. كوادر مؤهلة بخبرات طويلة، ورعاية طبية نضع فيها راحتكم وثقتكم أولًا، مع خدمة متخصصة في العلاج الطبيعي.',
+      shortDescription: 'رعاية طبية وعلاج طبيعي في بركاء، سلطنة عمان.',
       quickLinksTitle: 'روابط سريعة',
       contactTitle: 'بيانات الاتصال',
       verifiedServiceTitle: 'الخدمة الطبية المعتمدة',
@@ -165,10 +165,10 @@ export const translations = {
       switchLang: 'العربية',
     },
     hero: {
-      badge: 'Trusted Healthcare in the Sultanate of Oman • Barka',
-      title: 'Your Healthcare Journey Starts Here',
-      description: 'Qualified professionals with extensive experience, and medical care where your comfort and trust come first.',
-      primaryCta: 'Book Your Appointment via WhatsApp',
+      badge: 'Um Alqura Polyclinic • Barka',
+      title: 'Your health matters',
+      description: 'Medical care and physiotherapy in Barka.',
+      primaryCta: 'Book on WhatsApp',
       secondaryCta: 'Explore Our Services',
       quickSchedule: 'Saturday – Thursday: 9:00 AM – 1:00 PM | 4:00 PM – 8:00 PM',
       locationBadge: 'Barka, Muscat, Sultanate of Oman',
@@ -176,7 +176,7 @@ export const translations = {
     about: {
       sectionBadge: 'About Us',
       title: 'Medical Care with Trust and Care',
-      description: 'At Um Alqura Polyclinic, we are dedicated to delivering distinguished healthcare through qualified staff with extensive experience, prioritizing patient comfort and providing a compassionate, trusted medical experience.',
+      description: 'A qualified team focused on your comfort.',
       trustCards: [
         {
           id: 'qualified-cadres',
@@ -205,7 +205,7 @@ export const translations = {
       physiotherapy: {
         title: 'Physiotherapy',
         badge: 'Specialized Certified Care',
-        description: 'Physiotherapy service to help patients improve mobility and physical function through specialized care and attentive follow-up.',
+        description: 'Specialized sessions to improve mobility and relieve pain.',
         features: [
           'Tailored therapeutic rehabilitation programs for each patient',
           'Restoring mobility, physical function, and relieving discomfort',
@@ -258,7 +258,7 @@ export const translations = {
       mapDirectionsHint: 'Click the map button to get direct driving directions via Google Maps',
     },
     footer: {
-      shortDescription: 'Um Alqura Polyclinic in Barka, Sultanate of Oman. Qualified professionals with extensive experience, prioritizing your comfort and trust, offering specialized physiotherapy.',
+      shortDescription: 'Medical care and physiotherapy in Barka, Oman.',
       quickLinksTitle: 'Quick Links',
       contactTitle: 'Contact Information',
       verifiedServiceTitle: 'Confirmed Medical Service',
