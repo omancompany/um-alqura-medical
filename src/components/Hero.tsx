@@ -1,5 +1,5 @@
 import React from 'react';
-import { MessageCircle, ArrowLeft, ArrowRight, ShieldCheck, MapPin, Clock, Sparkles } from 'lucide-react';
+import { MessageCircle, ArrowLeft, ArrowRight, MapPin, Sparkles } from 'lucide-react';
 import { CLINIC_INFO, translations } from '../data/translations';
 import { Language } from '../types';
 import heroClinicImg from '../assets/images/gulf_clinic_reception_1789342603869.jpg';
@@ -87,21 +87,11 @@ export const Hero: React.FC<HeroProps> = ({ currentLang, onOpenBookingModal }) =
               </a>
             </div>
 
-            {/* Micro Trust & Schedule Info Strip */}
-            <div className="w-full pt-6 border-t border-slate-200/80 dark:border-slate-800 grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs sm:text-sm text-slate-600 dark:text-slate-400">
-              <div className="flex items-center gap-2.5">
-                <div className="w-7 h-7 rounded-lg bg-teal-100 dark:bg-teal-950 text-teal-700 dark:text-teal-300 flex items-center justify-center shrink-0">
-                  <Clock className="w-4 h-4" />
-                </div>
-                <span>{t.hero.quickSchedule}</span>
-              </div>
-              <div className="flex items-center gap-2.5">
-                <div className="w-7 h-7 rounded-lg bg-teal-100 dark:bg-teal-950 text-teal-700 dark:text-teal-300 flex items-center justify-center shrink-0">
-                  <ShieldCheck className="w-4 h-4" />
-                </div>
-                <span>{isRtl ? 'عيادة مرخصة وموثوقة' : 'Certified & Trusted Clinic'}</span>
-              </div>
-            </div>
+            <nav aria-label={isRtl ? 'روابط سريعة' : 'Quick links'} className="flex flex-wrap gap-3 text-sm font-semibold">
+              <a href="#hours" className="px-4 py-3 rounded-xl border border-teal-200 dark:border-teal-800 hover:bg-teal-100 dark:hover:bg-teal-900">{isRtl ? 'مواعيد العمل' : 'Working hours'}</a>
+              <a href={CLINIC_INFO.googleMapsUrl} target="_blank" rel="noopener noreferrer" className="px-4 py-3 rounded-xl border border-teal-200 dark:border-teal-800 hover:bg-teal-100 dark:hover:bg-teal-900">{isRtl ? 'موقعنا على الخريطة' : 'Get directions'}</a>
+              <a href={`tel:+${CLINIC_INFO.phoneRaw}`} className="px-4 py-3 rounded-xl border border-teal-200 dark:border-teal-800 hover:bg-teal-100 dark:hover:bg-teal-900">{isRtl ? 'اتصل بنا' : 'Call us'}</a>
+            </nav>
           </div>
 
           {/* Visual Column */}
