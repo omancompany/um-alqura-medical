@@ -52,6 +52,11 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ currentLang }) => {
           </p>
         </div>
 
+        <details className="group">
+          <summary className="mx-auto w-fit cursor-pointer list-none rounded-xl border border-teal-200 dark:border-teal-800 px-6 py-3 font-bold text-teal-800 dark:text-teal-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal-600">
+            <span className="group-open:hidden">{currentLang === 'ar' ? 'تعرّف علينا' : 'Learn about us'}</span>
+            <span className="hidden group-open:inline">{currentLang === 'ar' ? 'إخفاء التفاصيل' : 'Hide details'}</span>
+          </summary>
         {/* 3 Elegant Trust Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
           {t.about.trustCards.map((card) => (
@@ -72,6 +77,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ currentLang }) => {
             </div>
           ))}
         </div>
+        </details>
       </div>
     </section>
   );
