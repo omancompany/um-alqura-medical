@@ -104,11 +104,6 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({
                 </p>
 
                 {/* Service Quality Points */}
-                <details className="group mb-8">
-                  <summary className="cursor-pointer list-none rounded-xl border border-teal-200 dark:border-teal-800 px-4 py-3 text-teal-800 dark:text-teal-200 font-semibold mb-4">
-                    <span className="group-open:hidden">{isRtl ? 'تفاصيل الخدمة' : 'Service details'}</span>
-                    <span className="hidden group-open:inline">{isRtl ? 'إخفاء التفاصيل' : 'Hide details'}</span>
-                  </summary>
                   <div className="space-y-3">
                   {t.services.physiotherapy.features.map((feature, idx) => (
                     <div key={idx} className="flex items-start gap-3 text-sm sm:text-base text-slate-700 dark:text-slate-300">
@@ -117,7 +112,6 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({
                     </div>
                   ))}
                 </div>
-                </details>
               </div>
 
               {/* Action Button */}
