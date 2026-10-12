@@ -2,7 +2,7 @@ import React from 'react';
 import { MessageCircle, ArrowLeft, ArrowRight, MapPin, Sparkles } from 'lucide-react';
 import { CLINIC_INFO, translations } from '../data/translations';
 import { Language } from '../types';
-import heroClinicImg from '../assets/images/gulf_clinic_reception_1789342603869.jpg';
+const brandedImage = (name: string) => `${import.meta.env.BASE_URL}branded/${name}.webp`;
 
 interface HeroProps {
   currentLang: Language;
@@ -94,36 +94,23 @@ export const Hero: React.FC<HeroProps> = ({ currentLang, onOpenBookingModal }) =
             </nav>
           </div>
 
-          {/* Visual Column */}
-          <div className="lg:col-span-5 relative">
-            <div className="relative mx-auto max-w-md lg:max-w-none">
-              {/* Outer decorative ring */}
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-teal-900/10 border-4 border-white dark:border-slate-800 bg-white dark:bg-slate-900">
-                <img
-                  id="hero-clinic-photo"
-                  src={heroClinicImg}
-                  alt={isRtl ? 'صالة الاستقبال في مجمع أم القرى الطبي' : 'Um Alqura Polyclinic reception lounge'}
-                  referrerPolicy="no-referrer"
-                  className="w-full h-80 sm:h-96 object-cover transform hover:scale-102 transition-transform duration-700"
-                  loading="eager"
-                />
-
-                {/* Floating highlight card on the image */}
-                <div className="absolute bottom-4 inset-x-4 p-4 rounded-xl bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border border-slate-100 dark:border-slate-800 shadow-lg flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-lg bg-teal-600 text-white flex items-center justify-center shrink-0">
-                    <Sparkles className="w-5 h-5" />
-                  </div>
-                  <div className="flex flex-col">
-                    <span className="text-xs font-bold text-slate-900 dark:text-slate-100">
-                      {isRtl ? 'مجمع أم القرى الطبي' : 'Um Alqura Polyclinic'}
-                    </span>
-                    <span className="text-[11px] text-slate-600 dark:text-slate-400">
-                      {isRtl ? 'بركاء - رعاية متخصصة وعلاج طبيعي' : 'Barka - Specialized Care & Physiotherapy'}
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div className="lg:col-span-5 grid grid-cols-2 gap-3 items-start">
+            <figure className="col-span-2 rounded-3xl bg-white dark:bg-slate-900 border border-teal-100 dark:border-slate-800 p-3 shadow-xl shadow-teal-900/10">
+              <img id="hero-clinic-photo" src={brandedImage('clinic-exterior')} alt={isRtl ? 'واجهة مجمع أم القرى الطبي في بركاء' : 'Um Alqura Polyclinic exterior in Barka'} className="w-full max-h-[380px] object-contain rounded-2xl bg-white" loading="eager" width="880" height="1100" />
+              <figcaption className="flex items-center justify-between gap-3 px-2 pt-3 pb-1">
+                <span className="font-bold text-slate-900 dark:text-white">{isRtl ? 'أهلًا بكم في أم القرى' : 'Welcome to Um Alqura'}</span>
+                <a href={CLINIC_INFO.googleMapsUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-sm font-bold text-teal-700 dark:text-teal-300"><MapPin className="w-4 h-4" />{isRtl ? 'موقعنا' : 'Directions'}</a>
+              </figcaption>
+            </figure>
+            <figure className="rounded-2xl overflow-hidden bg-white dark:bg-slate-900 border border-teal-100 dark:border-slate-800 shadow-sm">
+              <img src={brandedImage('reception')} alt={isRtl ? 'استقبال مجمع أم القرى الطبي' : 'Um Alqura Polyclinic reception'} className="w-full aspect-square object-contain bg-white" loading="lazy" width="880" height="1100" />
+              <figcaption className="px-3 py-2 text-sm font-semibold">{isRtl ? 'استقبال يرحب بك' : 'A welcoming reception'}</figcaption>
+            </figure>
+            <a href="#gallery" className="flex flex-col items-center justify-center gap-3 self-stretch rounded-2xl border border-teal-200 dark:border-teal-800 bg-teal-100/70 dark:bg-teal-950 text-teal-900 dark:text-teal-200 px-4 py-6 text-center hover:bg-teal-200/70 dark:hover:bg-teal-900 transition-colors">
+              <Sparkles className="w-7 h-7" />
+              <span className="font-bold">{isRtl ? 'شاهد المجمع وتجهيزاته' : 'Explore our clinic & equipment'}</span>
+              <ArrowIcon className="w-5 h-5" />
+            </a>
           </div>
         </div>
       </div>

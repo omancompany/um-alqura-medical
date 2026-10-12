@@ -2,7 +2,7 @@ import React from 'react';
 import { Activity, CheckCircle2, MessageCircle, ArrowLeft, ArrowRight } from 'lucide-react';
 import { CLINIC_INFO, translations } from '../data/translations';
 import { Language } from '../types';
-import physioImg from '../assets/images/gulf_doctor_desk_1789342615606.jpg';
+const physioImg = `${import.meta.env.BASE_URL}branded/treatment-room.webp`;
 
 interface ServicesSectionProps {
   currentLang: Language;
@@ -65,7 +65,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({
                 src={physioImg}
                 alt={isRtl ? 'عيادة العلاج الطبيعي في مجمع أم القرى الطبي' : 'Physiotherapy suite at Um Alqura Polyclinic'}
                 referrerPolicy="no-referrer"
-                className="w-full h-full object-cover"
+                className="w-full h-full max-h-[600px] object-contain bg-white"
                 loading="lazy"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent lg:hidden" />
