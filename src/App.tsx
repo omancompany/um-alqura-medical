@@ -8,6 +8,7 @@ import { Language, Theme } from './types';
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
 import { AboutSection } from './components/AboutSection';
+import { GallerySection } from './components/GallerySection';
 import { ServicesSection } from './components/ServicesSection';
 import { WorkingHoursSection } from './components/WorkingHoursSection';
 import { AppointmentCtaSection } from './components/AppointmentCtaSection';
@@ -99,6 +100,8 @@ export default function App() {
           currentLang={currentLang}
           onOpenBookingModal={handleOpenBookingModal}
         />
+
+        <GallerySection currentLang={currentLang} />
 
         {/* 5. Working Hours Section */}
         <WorkingHoursSection
