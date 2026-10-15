@@ -1,3 +1,5 @@
+import {useModalFocus} from '../use-modal-focus';
+import { demoRequested } from '../demo-preview';
 import React, { useState } from 'react';
 import { X, MessageCircle, CalendarCheck, Clock, Check } from 'lucide-react';
 import { CLINIC_INFO, translations } from '../data/translations';
@@ -26,6 +28,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
   const [shift, setShift] = useState<'morning' | 'evening'>('morning');
   const [day, setDay] = useState('');
 
+  const modalRef=useModalFocus(isOpen,onClose);
   if (!isOpen) return null;
 
   const daysOptions = isRtl
@@ -70,13 +73,14 @@ export const BookingModal: React.FC<BookingModalProps> = ({
         `Thank you.`;
     }
 
+    if (demoRequested()) { window.alert(isRtl ? 'هذا طلب تجريبي فقط؛ لم يُرسل أي حجز.' : 'Demo request only. No booking has been sent.'); onClose(); return; }
     const url = `${CLINIC_INFO.whatsappUrl}?text=${encodeURIComponent(messageText)}`;
     window.open(url, '_blank', 'noopener,noreferrer');
     onClose();
   };
 
   return (
-    <div
+    <div role="dialog" aria-modal="true" aria-label="طلب حجز" ref={modalRef} tabIndex={-1}
       className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 dark:bg-black/80 backdrop-blur-xs animate-in fade-in duration-200"
       onClick={onClose}
     >

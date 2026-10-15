@@ -1,17 +1,18 @@
+import {contact,whatsappUrl,socials} from '../contact-config';
 export const CLINIC_INFO = {
   nameAr: 'مجمع أم القرى الطبي',
   nameEn: 'Um Alqura Polyclinic',
   fullNameAr: 'مجمع أم القرى الطبي في بركاء',
   fullNameEn: 'Um Alqura Polyclinic in Barka',
-  locationAr: 'بركاء، مسقط، سلطنة عمان',
-  locationEn: 'Barka, Muscat, Sultanate of Oman',
-  phoneRaw: '96879470050',
-  phoneDisplay: '+968 7947 0050',
-  whatsappUrl: 'https://wa.me/96879470050',
-  instagramUsername: '@umalqura_poly',
-  instagramUrl: 'https://www.instagram.com/umalqura_poly/',
-  googleMapsUrl: 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent('مجمع أم القرى الطبي Umalqura Polyclinic, Barka, Muscat, Oman'),
-  googleMapsEmbed: 'https://maps.google.com/maps?q=' + encodeURIComponent('مجمع أم القرى الطبي Barka Oman') + '&t=&z=15&ie=UTF8&iwloc=&output=embed',
+  locationAr: contact.addressAr,
+  locationEn: contact.addressEn,
+  phoneRaw: contact.phone,
+  phoneDisplay: '+' + contact.phone,
+  whatsappUrl,
+  instagramUsername: socials.instagramUsername,
+  instagramUrl: socials.instagramUrl,
+  googleMapsUrl: 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(contact.mapQuery),
+  googleMapsEmbed: 'https://maps.google.com/maps?q=' + encodeURIComponent(contact.mapQuery) + '&t=&z=15&ie=UTF8&iwloc=&output=embed',
 };
 
 export const translations = {

@@ -5,8 +5,8 @@ import {defineConfig} from 'vite';
 
 export default defineConfig(() => {
   return {
-    base: "/um-alqura-medical/",
-    plugins: [react(), tailwindcss()],
+    base: process.env.VITE_BASE || "/",
+    plugins: [react(), tailwindcss(), {name:'approved-contact-metadata',transformIndexHtml(){const c=JSON.parse(process.env.SITE_CONTACT_JSON||'{}');return c.siteUrl?[{tag:'meta',attrs:{property:'og:url',content:c.siteUrl},injectTo:'head'},{tag:'link',attrs:{rel:'canonical',href:c.siteUrl},injectTo:'head'}]:[]}}],
     resolve: {
       alias: {
         '@': path.resolve(__dirname, '.'),

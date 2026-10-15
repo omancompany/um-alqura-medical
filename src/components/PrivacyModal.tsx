@@ -1,3 +1,4 @@
+import {useModalFocus} from '../use-modal-focus';
 import React from 'react';
 import { X, ShieldCheck } from 'lucide-react';
 import { translations } from '../data/translations';
@@ -12,10 +13,11 @@ interface PrivacyModalProps {
 export const PrivacyModal: React.FC<PrivacyModalProps> = ({ isOpen, onClose, currentLang }) => {
   const t = translations[currentLang];
 
+  const modalRef=useModalFocus(isOpen,onClose);
   if (!isOpen) return null;
 
   return (
-    <div
+    <div role="dialog" aria-modal="true" aria-label="الخصوصية" ref={modalRef} tabIndex={-1}
       className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 dark:bg-black/80 backdrop-blur-xs animate-in fade-in duration-200"
       onClick={onClose}
     >
