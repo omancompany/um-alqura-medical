@@ -22,9 +22,10 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ currentLang }) =
   const [copied, setCopied] = useState(false);
 
   const handleCopyPhone = () => {
-    navigator.clipboard.writeText(CLINIC_INFO.phoneDisplay);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2500);
+    navigator.clipboard.writeText(CLINIC_INFO.phoneDisplay).then(() => {
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2500);
+    }).catch(() => setCopied(false));
   };
 
   return (
@@ -213,7 +214,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ currentLang }) =
                 <div className="relative w-full h-72 sm:h-80 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700 bg-slate-100 dark:bg-slate-800 shadow-inner">
                   <iframe
                     title={currentLang === 'ar' ? 'خريطة مجمع أم القرى الطبي في بركاء' : 'Um Alqura Polyclinic map Barka'}
-                    src="https://maps.google.com/maps?q=Barka%20Oman&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                    src={CLINIC_INFO.googleMapsEmbed}
                     className="w-full h-full border-0"
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"

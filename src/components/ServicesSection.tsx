@@ -1,3 +1,4 @@
+import { demoRequested } from '../demo-preview';
 import React from 'react';
 import { Activity, CheckCircle2, MessageCircle, ArrowLeft, ArrowRight } from 'lucide-react';
 import { CLINIC_INFO, translations } from '../data/translations';
@@ -18,6 +19,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({
   const ArrowIcon = isRtl ? ArrowLeft : ArrowRight;
 
   const handleBookPhysioWhatsApp = () => {
+    if (demoRequested()) return;
     const text = isRtl
       ? 'السلام عليكم، أود حجز موعد لخدمة العلاج الطبيعي في مجمع أم القرى الطبي في بركاء'
       : 'Hello, I would like to book an appointment for Physiotherapy at Um Alqura Polyclinic in Barka';
