@@ -1,3 +1,4 @@
+import { DemoBar, DemoUnavailable, demoRequested, demoEnabled, blockDemoExternal } from './demo-preview';
 /**
  * @license
  * SPDX-License-Identifier: Apache-2.0
@@ -68,12 +69,15 @@ export default function App() {
     setIsBookingModalOpen(true);
   };
 
+  if (demoRequested() && !demoEnabled()) return <DemoUnavailable/>;
+
   return (
-    <div
+    <div onClickCapture={blockDemoExternal}
       id="um-alqura-app"
       className="min-h-screen flex flex-col bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-100 font-sans transition-colors duration-300"
     >
       {/* 1. Sticky Header with Logo, Nav, Theme Switcher, WhatsApp CTA, and Language Switcher */}
+      <DemoBar lang={currentLang}/>
       <Header
         currentLang={currentLang}
         theme={theme}
