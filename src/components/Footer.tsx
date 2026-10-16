@@ -55,9 +55,9 @@ export const Footer: React.FC<FooterProps> = ({ currentLang, onOpenPrivacyModal 
 
           {/* Quick Links */}
           <div className="lg:col-span-3 space-y-4">
-            <h4 className="text-sm font-bold text-white uppercase tracking-wider">
+            <h2 className="text-sm font-bold text-white uppercase tracking-wider">
               {t.footer.quickLinksTitle}
-            </h4>
+            </h2>
             <ul className="space-y-2.5 text-sm">
               {navLinks.map((link) => (
                 <li key={link.href}>
@@ -85,9 +85,9 @@ export const Footer: React.FC<FooterProps> = ({ currentLang, onOpenPrivacyModal 
 
           {/* Confirmed Medical Service */}
           <div className="lg:col-span-4 space-y-4">
-            <h4 className="text-sm font-bold text-white uppercase tracking-wider">
+            <h2 className="text-sm font-bold text-white uppercase tracking-wider">
               {t.footer.contactTitle}
-            </h4>
+            </h2>
 
             <div className="space-y-3 text-sm">
               {/* WhatsApp */}
