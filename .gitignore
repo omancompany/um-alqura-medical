@@ -11,3 +11,5 @@ coverage/
 src/generated/contact.json
 public/robots.txt
 public/sitemap.xml
+
+public/privacy.html

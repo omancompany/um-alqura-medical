@@ -69,7 +69,6 @@ export const Header: React.FC<HeaderProps> = ({
             href="#hero"
             onClick={(e) => handleNavClick(e, '#hero')}
             className="flex items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-600 rounded-lg transition-transform active:scale-95"
-            aria-label={currentLang === 'ar' ? CLINIC_INFO.nameAr : CLINIC_INFO.nameEn}
           >
             <ClinicLogo size={isScrolled ? 'sm' : 'md'} />
           </a>

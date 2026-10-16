@@ -69,7 +69,7 @@ export const Hero: React.FC<HeroProps> = ({ currentLang, onOpenBookingModal }) =
                 href={CLINIC_INFO.whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 active:scale-98 text-white font-bold text-base shadow-md shadow-emerald-700/20 transition-all cursor-pointer group"
+                className="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl bg-emerald-700 hover:bg-emerald-800 active:scale-98 text-white font-bold text-base shadow-md shadow-emerald-700/20 transition-all cursor-pointer group"
               >
                 <MessageCircle className="w-5 h-5 transition-transform group-hover:scale-110" />
                 <span>{t.hero.primaryCta}</span>
